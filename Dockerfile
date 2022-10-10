@@ -12,5 +12,6 @@ FROM run-env
 ENV PATH=/screeps:$PATH
 WORKDIR /screeps
 COPY --from=compile-env /screeps-server-builder .
-RUN ln -s /screeps/node_modules/.bin/screeps /screeps/screeps
+RUN ln -s /screeps/node_modules/.bin/screeps /screeps/screeps && \ 
+rm -rf /var/cache/apk/* /var/lib/apk/* /etc/apk/cache
 EXPOSE 21025 21026 21027
