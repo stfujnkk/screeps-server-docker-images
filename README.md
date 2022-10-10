@@ -10,9 +10,10 @@ Screeps World server 's docker image
 ## Server launch
 
 ```bash
-docker run -p 21825:21025 -p 21826:21026 -itd lyf-screep-server sh
-docker exec -it dbb33d5645e4b56428 screeps init
-docker exec -itd dbb33d5645e4b56428 screeps start
+docker exec -it screeps-server bash
+cd /screeps-server
+npx screeps init
+npx screeps start
 ```
 ## Connect
 

@@ -1,7 +1,6 @@
-@echo off
+#!/bin/sh
 
-set docker_proxy=http://host.docker.internal:7890
-set image_name=lyf-screep-server
-
-docker build --build-arg http_proxy=%docker_proxy% --build-arg https_proxy=%docker_proxy% ^
-    --build-arg HTTP_PROXY=%docker_proxy% --build-arg HTTPS_PROXY=%docker_proxy% -t %image_name% .
+docker pull node:10-buster-slim 
+docker run --name screeps-server -itd -p 8385:21025 -p 8386:21026 -p 8387:21027 node:10-buster-slim bash
+docker cp screeps-server.tar.gz screeps-server:/
+docker exec -it screeps-server tar -zxvf screeps-server.tar.gz /
