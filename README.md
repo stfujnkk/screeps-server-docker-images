@@ -4,7 +4,7 @@ Screeps World server 's docker image
 ## Download
 
 ```bash
-https://github.com/stfujnkk/screeps-server-docker-images/releases
+wget https://github.com/stfujnkk/screeps-server-docker-images/releases/download/v1.0.0/screeps-server.tar.gz
 ```
 
 ## Build
