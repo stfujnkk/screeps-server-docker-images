@@ -1,6 +1,12 @@
 # screeps-server-docker-images
 Screeps World server 's docker image
 
+## Download
+
+```bash
+https://github.com/stfujnkk/screeps-server-docker-images/releases
+```
+
 ## Build
 
 ```bash
